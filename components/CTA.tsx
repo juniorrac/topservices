@@ -4,7 +4,7 @@ import { FaWhatsapp, FaPhone } from 'react-icons/fa'
 
 export default function CTA() {
   return (
-    <section className="relative py-24">
+    <section className="relative py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -13,7 +13,7 @@ export default function CTA() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/92 via-navy-mid/80 to-navy/70" />
+        <div className="absolute inset-0 bg-navy/90" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-5 text-center text-white">
