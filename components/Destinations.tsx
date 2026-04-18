@@ -35,10 +35,11 @@ const destinations = [
     price: '45 000',
   },
   {
-    title: 'Monument Renaissance',
+    title: 'Monument de la Renaissance',
     description: 'Plus haute statue d\'Afrique, vue panoramique sur Dakar',
     image: '/images/monument.jpg',
     duration: '2-3 heures',
+    location: 'Dakar, Sénégal',
     price: '15 000',
   },
   {
@@ -52,7 +53,7 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section id="destinations" className="py-20 bg-white">
+    <section id="destinations" className="py-20 bg-sand-light">
       <div className="max-w-7xl mx-auto px-5">
         <div className="text-center mb-14">
           <h2 className="section-title">Nos destinations populaires</h2>
@@ -65,7 +66,7 @@ export default function Destinations() {
               key={index}
               className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ${
                 dest.featured ? 'md:row-span-2' : ''
-              }`}
+              } ${index === destinations.length - 1 ? 'lg:col-start-2' : ''}`}
             >
               <div className={`relative overflow-hidden ${dest.featured ? 'h-64' : 'h-44'}`}>
                 <Image

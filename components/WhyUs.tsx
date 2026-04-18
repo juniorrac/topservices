@@ -13,7 +13,7 @@ const features = [
 
 export default function WhyUs() {
   return (
-    <section id="apropos" className="py-20 bg-white">
+    <section id="apropos" className="py-20 bg-sand-light">
       <div className="max-w-7xl mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>

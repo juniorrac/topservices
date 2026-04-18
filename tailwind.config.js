@@ -29,7 +29,7 @@ module.exports = {
         },
         sand: {
           DEFAULT: '#FEF7ED',
-          light: '#FFFBF5',
+          light: '#FDF4E7',
         },
       },
       fontFamily: {

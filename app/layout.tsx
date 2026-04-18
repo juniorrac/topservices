@@ -3,8 +3,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Top Services | Transport & Tourisme au Sénégal 🇸🇳',
-  description: 'Top Services Sénégal - Transferts aéroport AIBD, location de voiture avec chauffeur, circuits touristiques (Lac Rose, Gorée, Saloum). Réservez maintenant !',
-  keywords: 'transport Sénégal, transfert aéroport Dakar AIBD, excursion Lac Rose, tourisme Sénégal, location voiture chauffeur Dakar, Top Services',
+  description: 'Top Services propose des transferts vers et depuis l\'aéroport AIBD, la location de véhicules comfort et climatisé (avec ou sans chauffeur), ainsi que des circuits touristiques personnalisés avec chauffeur privé.',
+  keywords: 'location voiture Sénégal, transfert aéroport Sénégal, chauffeur privé Sénégal, location SUV Sénégal, transport aéroport Dakar, transfert AIBD La Somone, location voiture avec chauffeur Sénégal, circuit touristique Sénégal, Top Services',
   authors: [{ name: 'Top Services Sénégal' }],
   openGraph: {
     title: 'Top Services - Transport & Tourisme au Sénégal',

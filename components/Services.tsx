@@ -30,7 +30,7 @@ const services = [
     icon: FaKey,
     title: 'Location sans Chauffeur',
     description: 'Véhicules disponibles à la journée ou à la semaine pour voyager à votre rythme.',
-    image: '/images/suv-stlouis.jpg',
+    image: '/images/baobabs.jpg',
   },
 ]
 
