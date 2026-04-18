@@ -49,6 +49,100 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo.jpg" />
         <meta name="google-site-verification" content={'XYHmW1iWqmwMExovcZCf5g2Q-jcgMalFy1xbnWO7RIo'} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "LocalBusiness",
+                  "@id": "https://www.topservicessn.com/#business",
+                  "name": "Top Services SN",
+                  "description": "Top Services SN propose des transferts aéroport AIBD, la location de véhicules confort climatisés avec ou sans chauffeur, et des circuits touristiques personnalisés au Sénégal.",
+                  "url": "https://www.topservicessn.com",
+                  "telephone": "+221776169867",
+                  "email": "topservicessn@gmail.com",
+                  "image": "https://www.topservicessn.com/images/logo.jpg",
+                  "logo": "https://www.topservicessn.com/images/logo.jpg",
+                  "priceRange": "$$",
+                  "currenciesAccepted": "XOF",
+                  "paymentAccepted": "Cash, Wave, Orange Money",
+                  "openingHours": "Mo-Su 00:00-23:59",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "La Somone",
+                    "addressLocality": "La Somone",
+                    "addressRegion": "Thiès",
+                    "addressCountry": "SN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 14.4833,
+                    "longitude": -17.0667
+                  },
+                  "areaServed": [
+                    { "@type": "City", "name": "Dakar" },
+                    { "@type": "City", "name": "La Somone" },
+                    { "@type": "City", "name": "Saly" },
+                    { "@type": "City", "name": "Saint-Louis" },
+                    { "@type": "Country", "name": "Sénégal" }
+                  ],
+                  "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Services de transport au Sénégal",
+                    "itemListElement": [
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Service",
+                          "name": "Transfert Aéroport AIBD",
+                          "description": "Transfert vers et depuis l'aéroport international Blaise Diagne (AIBD) avec accueil personnalisé."
+                        }
+                      },
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Service",
+                          "name": "Location voiture avec chauffeur Sénégal",
+                          "description": "Location de SUV et berlines climatisés avec chauffeur professionnel au Sénégal."
+                        }
+                      },
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Service",
+                          "name": "Location voiture sans chauffeur Sénégal",
+                          "description": "Location de véhicules à la journée ou à la semaine pour voyager librement au Sénégal."
+                        }
+                      },
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Service",
+                          "name": "Circuit touristique Sénégal",
+                          "description": "Circuits personnalisés : Lac Rose, Île de Gorée, Delta du Saloum, Réserve de Bandia."
+                        }
+                      }
+                    ]
+                  },
+                  "sameAs": [
+                    "https://www.facebook.com/topservicessn",
+                    "https://www.instagram.com/topservicessn"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.topservicessn.com/#website",
+                  "url": "https://www.topservicessn.com",
+                  "name": "Top Services SN",
+                  "description": "Transfert aéroport AIBD, location voiture avec ou sans chauffeur, circuits touristiques au Sénégal.",
+                  "inLanguage": "fr-FR"
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>
