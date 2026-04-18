@@ -48,6 +48,7 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/images/logo.jpg" />
+        <meta name="google-site-verification" content="XYHmW1iWqmwMExovcZCf5g2Q-jcgMalFy1xbnWO7RIo" />
       </head>
       <body>{children}</body>
     </html>
