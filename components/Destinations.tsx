@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaClock, FaMapMarkerAlt, FaRoute } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaRoute } from 'react-icons/fa'
 
 const destinations = [
   {
@@ -84,18 +84,14 @@ export default function Destinations() {
               <div className="p-5">
                 <h3 className="text-xl font-bold text-gray-800 mb-2">{dest.title}</h3>
                 <p className="text-gray-500 text-sm mb-3 leading-relaxed">{dest.description}</p>
-                <div className="flex flex-wrap gap-3 text-xs text-gray-400 mb-4">
-                  <span className="flex items-center gap-1">
-                    <FaClock className="text-orange" />
-                    {dest.duration}
-                  </span>
-                  {dest.location && (
+                {dest.location && (
+                  <div className="flex flex-wrap gap-3 text-xs text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
                       <FaMapMarkerAlt className="text-orange" />
                       {dest.location}
                     </span>
-                  )}
-                </div>
+                  </div>
+                )}
                 <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                   <Link
                     href="#contact"

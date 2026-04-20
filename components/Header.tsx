@@ -43,7 +43,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-5">
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image src="/images/logo.jpg" alt="Top Services Logo" width={80} height={80} className="rounded-lg" />
+            <Image src="/images/logo.jpg" alt="Top Services Logo" width={100} height={100} className="rounded-lg" />
           </Link>
 
           <ul className="hidden md:flex items-center gap-8">
