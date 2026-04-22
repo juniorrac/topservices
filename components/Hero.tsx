@@ -18,7 +18,7 @@ export default function Hero() {
             <span className="text-gold-light">de souvenirs.</span>
           </h1>
 
-          <p className="text-lg md:text-xl opacity-95 mb-8">
+          <p className="text-lg md:text-xl text-gold-light mb-8">
             Top Services vous accompagne avec fiabilité, confort et chaleur partout au Sénégal.
           </p>
 
