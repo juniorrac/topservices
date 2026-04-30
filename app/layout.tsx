@@ -138,6 +138,35 @@ export default function RootLayout({
                   "name": "Top Services SN",
                   "description": "Transfert aéroport AIBD, location voiture avec ou sans chauffeur, circuits touristiques au Sénégal.",
                   "inLanguage": "fr-FR"
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Top Services SN — Transfert & Location Voiture Sénégal",
+                      "item": "https://www.topservicessn.com"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Transfert Aéroport AIBD Dakar",
+                      "item": "https://www.topservicessn.com/#services"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Location Voiture avec Chauffeur Sénégal",
+                      "item": "https://www.topservicessn.com/#services"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 4,
+                      "name": "Circuits Touristiques — Lac Rose, Gorée, Saloum",
+                      "item": "https://www.topservicessn.com/#destinations"
+                    }
+                  ]
                 }
               ]
             })
