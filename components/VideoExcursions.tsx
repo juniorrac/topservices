@@ -19,14 +19,14 @@ const videos = [
     poster: '/images/goree.jpg',
   },
   {
-    src: '/videos/Réserve de BANDIA.mp4',
+    src: '/videos/bandia.mp4',
     title: 'Réserve de Bandia',
     subtitle: 'Safari africain — girafes, rhinocéros',
     location: 'Sindia, Sénégal',
     poster: '/images/girafe.jpg',
   },
   {
-    src: '/videos/Delta du SALOUM.mp4',
+    src: '/videos/saloum.mp4',
     title: 'Delta du Saloum',
     subtitle: 'Mangroves, îles et villages de pêcheurs',
     location: 'Fatick, Sénégal',
