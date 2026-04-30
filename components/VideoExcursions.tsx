@@ -1,37 +1,41 @@
 'use client'
 
 import { useState } from 'react'
-import { FaPlay, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaPlay, FaTimes, FaMapMarkerAlt } from 'react-icons/fa'
 
 const videos = [
   {
-    id: 'kRNfV2P_h4Y',
+    src: '/videos/lac_rose.mp4',
     title: 'Lac Rose',
     subtitle: 'Le lac aux eaux roses unique au monde',
     location: '35 km de Dakar',
+    poster: '/images/lac-rose-pirogues.jpg',
   },
   {
-    id: 'ZQ8C5L5XHCE',
+    src: '/videos/goree.mp4',
     title: 'Île de Gorée',
     subtitle: 'Site UNESCO, histoire et culture',
     location: 'Dakar',
+    poster: '/images/goree.jpg',
   },
   {
-    id: '6RoJGPjMpMk',
+    src: '/videos/Réserve de BANDIA.mp4',
     title: 'Réserve de Bandia',
     subtitle: 'Safari africain — girafes, rhinocéros',
     location: 'Sindia, Sénégal',
+    poster: '/images/girafe.jpg',
   },
   {
-    id: 'QwLWIy4ZHNM',
+    src: '/videos/Delta du SALOUM.mp4',
     title: 'Delta du Saloum',
     subtitle: 'Mangroves, îles et villages de pêcheurs',
     location: 'Fatick, Sénégal',
+    poster: '/images/saloum.jpg',
   },
 ]
 
 export default function VideoExcursions() {
-  const [activeVideo, setActiveVideo] = useState<string | null>(null)
+  const [activeVideo, setActiveVideo] = useState<typeof videos[0] | null>(null)
 
   return (
     <section id="videos" className="py-20 bg-navy">
@@ -48,32 +52,21 @@ export default function VideoExcursions() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {videos.map((video) => (
             <div
-              key={video.id}
-              className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-navy-mid border border-white/10"
+              key={video.src}
+              onClick={() => setActiveVideo(video)}
+              className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-navy-mid border border-white/10 cursor-pointer"
             >
-              <div className="relative aspect-video group cursor-pointer" onClick={() => setActiveVideo(video.id)}>
-                {activeVideo === video.id ? (
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                ) : (
-                  <>
-                    <img
-                      src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                      alt={video.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/20 transition-colors flex items-center justify-center">
-                      <div className="w-14 h-14 bg-gold rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                        <FaPlay className="text-navy text-xl ml-1" />
-                      </div>
-                    </div>
-                  </>
-                )}
+              <div className="relative aspect-video group">
+                <img
+                  src={video.poster}
+                  alt={video.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/20 transition-colors flex items-center justify-center">
+                  <div className="w-14 h-14 bg-gold rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                    <FaPlay className="text-navy text-xl ml-1" />
+                  </div>
+                </div>
               </div>
               <div className="p-4">
                 <h3 className="text-white font-semibold text-base mb-1">{video.title}</h3>
@@ -87,6 +80,38 @@ export default function VideoExcursions() {
           ))}
         </div>
       </div>
+
+      {/* Modal plein écran */}
+      {activeVideo && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setActiveVideo(null)}
+        >
+          <div
+            className="relative w-full max-w-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setActiveVideo(null)}
+              className="absolute -top-12 right-0 text-white text-2xl hover:text-gold transition-colors"
+            >
+              <FaTimes />
+            </button>
+            <div className="mb-3">
+              <h3 className="text-white font-bold text-xl">{activeVideo.title}</h3>
+              <p className="text-white/60 text-sm">{activeVideo.location}</p>
+            </div>
+            <video
+              src={activeVideo.src}
+              poster={activeVideo.poster}
+              controls
+              autoPlay
+              className="w-full rounded-xl shadow-2xl"
+              playsInline
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
